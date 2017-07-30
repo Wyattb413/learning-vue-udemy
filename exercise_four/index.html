@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://npmcdn.com/vue/dist/vue.js"></script>
+    <link href="styles.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <div id="exercise">
+      <!-- 1) Start the Effect with the Button. The Effect should alternate the "highlight" or "shrink" class on each new setInterval tick (attach respective class to the div with id "effect" below) -->
+      <div>
+        <button @click="startEffect">Start Effect</button>
+        <div id="effect" :class="effectClasses"></div>
+      </div>
+      <!-- 2) Create a couple of CSS classes and attach them via the array syntax -->
+      <div :class="['bigText', 'purpleText', 'blackBorder']">I got class :)</div>
+      <!-- 3) Let the user enter a class (create some example classes) and attach it -->
+      <div>
+        <input type="checkbox" name="customizeDiv" value="bigText" @click="customizeDiv">Big Text<br>
+        <input type="checkbox" name="customizeDiv" value="purpleText" @click="customizeDiv">Purple Text<br>
+        <input type="checkbox" name="customizeDiv" value="blackBorder" @click="customizeDiv">Black Border<br>
+        <div :class="customizeDivClasses">Customize Me!</div>
+      </div>
+
+      <hr>
+
+      <!-- 4) Let the user enter a class and enter true/ false for another class (create some example classes) and attach the classes -->
+      <div>
+        Enter one of the following classes:
+        <ul>
+          <li>bigText     | Enabled: {{ inputSelectionClasses.bigText }}</li>
+          <li>purpleText  | Enabled: {{ inputSelectionClasses.purpleText }}</li>
+          <li>blackBorder | Enabled: {{ inputSelectionClasses.blackBorder }}</li>
+        </ul>
+        In here --> <input id="inputSelectionField" type="text">
+        <br>
+        Enable the class here (true/false) --><input type="text" @keyup="inputSelection">
+        <div :class="inputSelectionClasses">Hello there</div>
+      </div>
+
+      <hr>
+
+      <!-- 5) Repeat 3) but now with values for styles (instead of class names). Attach the respective styles.  -->
+      <div>
+        Change the color of the text below by entering a color here --><input type="text" v-model="styleDiv.color">
+        <div :style="styleDiv">Change the color of this text!</div>
+      </div>
+
+      <hr>
+
+      <!-- 6) Create a simple progress bar with setInterval and style bindings. Start it by hitting the below button. -->
+      <div>
+        <button v-on:click="startProgress">Start Progress</button>
+        <div id="progressBar" :class="'progress-bar'">
+          <div id="progress" :style="progressBar">{{ progressBar.width }}</div>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+
+  </body>
+</html>
