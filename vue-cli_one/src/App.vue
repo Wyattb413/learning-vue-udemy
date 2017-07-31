@@ -1,15 +1,15 @@
 <template>
     <div class="container">
         <div class="row">
-            <myTitle></myTitle>
+            <my-title></my-title>
         </div>
         <hr>
         <div class="row">
-            <myServerList></myServerList>
-            <myServerDetails></myServerDetails>
+            <my-serverList></my-serverList>
+            <my-serverDetails></my-serverDetails>
         </div>
         <hr>
-        <myFooter></myFooter>
+        <my-footer></my-footer>
     </div>
 </template>
 
@@ -21,10 +21,10 @@
 
     export default {
         components: {
-            'myTitle': Title,
-            'myServerList': ServerList,
-            'myServerDetails': ServerDetails,
-            'myFooter': Footer
+            'my-title': Title,
+            'my-serverList': ServerList,
+            'my-serverDetails': ServerDetails,
+            'my-footer': Footer
         }
     }
 </script>
