@@ -1,0 +1,9 @@
+{
+  "description": "Tracks any Node.js based dependencies for Vile.",
+  "name": "vile-project-dependency-config",
+  "private": true,
+  "devDependencies": {
+    "vile": "^0.19.1",
+    "vile-nsp": "^0.2.15"
+  }
+}
