@@ -1,5 +1,7 @@
 # Vue.js Notes
 
+[**Udemy Course Link**](https://www.udemy.com/vuejs-2-the-complete-guide/learn/v4/overview)
+
 **S#** = Section Number
 
 **L#** = Lesson Number
