@@ -1,10 +1,13 @@
 # Vue.js Notes
 
+S# = Section Number
+L# = Lesson Number
+
 ## Table of Contents
 Lesson Topic | Link
 --- | ---
-Let's Create our First Vuejs Application | [1.2](#s1-l2)
-Extending the Vuejs Application | [1.3](#s1-l3)
+Let's Create our First Vuejs Application | [S1 L2](#s1-l2)
+Extending the Vuejs Application | [S1 L3](#s1-l3)
 
 ### S1 L2
 - [Vue CDN Link](https://unpkg.com/vue/dist/vue.js)
