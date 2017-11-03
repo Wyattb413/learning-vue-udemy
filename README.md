@@ -9,8 +9,12 @@
 ## Table of Contents
 Lesson Topic | Link
 --- | ---
+**SECTION 1** | [Section 1](#section-1)
 Let's Create our First Vuejs Application | [S1 L2](#s1-l2)
 Extending the Vuejs Application | [S1 L3](#s1-l3)
+**SECTION 2** | [Section 2](#section-2)
+
+## SECTION 1
 
 ### S1 L2
 - [Vue CDN Link](https://unpkg.com/vue/dist/vue.js)
@@ -47,8 +51,6 @@ new Vue({
     }
 });
 ```
-
-
 
 ### S1 L3
 - Directives: `v-on`
@@ -89,3 +91,6 @@ new Vue({
     }
 });
 ```
+## SECTION 2
+
+### S2 L1
