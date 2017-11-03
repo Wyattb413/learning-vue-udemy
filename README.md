@@ -3,8 +3,8 @@
 ## Table of Contents
 Lesson Topic | Link
 --- | ---
-Let's Create our First Vuejs Application | [1.2](#S1-L2)
-Extending the Vuejs Application | [1.3](#S1-L3)
+Let's Create our First Vuejs Application | [1.2](#s1-l2)
+Extending the Vuejs Application | [1.3](#s1-l3)
 
 ### S1 L2
 - [Vue CDN Link](https://unpkg.com/vue/dist/vue.js)
