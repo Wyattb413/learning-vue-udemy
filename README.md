@@ -6,7 +6,7 @@ Lesson Topic | Link
 Let's Create our First Vuejs Application | [1.2](#S1-L2)
 Extending the Vuejs Application | [1.3](#S1-L3)
 
-##S1 L2
+## S1 L2
 - [Vue CDN Link](https://unpkg.com/vue/dist/vue.js)
 
 - Create Vue instance
@@ -44,7 +44,7 @@ new Vue({
 
 
 
-##S1 L3
+## S1 L3
 - Directives: `v-on`
 ```html
 <div id="app">
