@@ -2,19 +2,20 @@
 
 [**Udemy Course Link**](https://www.udemy.com/vuejs-2-the-complete-guide/learn/v4/overview)
 
+[**Vue CDN Link**](https://unpkg.com/vue/dist/vue.js)
+
 ## Table of Contents
 Lesson Topic | Link
 --- | ---
-**SECTION 1** | [Section 1](#section-1)
-Let's Create our First Vuejs Application | [Lesson 2](#section-1-lesson-2)
-Extending the Vuejs Application | [Lesson 3](#section-1-lesson-3)
-**SECTION 2** | [Section 2](#section-2-lesson-1)
+**SECTION 1** | [**Section 1**](#section-1)
+Let's Create our First Vuejs Application | [Lecture 2](#section-1-lecture-2)
+Extending the Vuejs Application | [Lecture 3](#section-1-lecture-3)
+**SECTION 2** | [**Section 2**](#section-2)
+Understanding Vuejs Template Syntax and Instance Work Together | [Lecture 10](#section-2-lecture-10)
 
 ## SECTION 1
 
-### Section 1 Lesson 2
-- [Vue CDN Link](https://unpkg.com/vue/dist/vue.js)
-
+### Section 1 Lecture 2
 - Create Vue instance
 ```javascript
 new Vue({});
@@ -48,7 +49,7 @@ new Vue({
 });
 ```
 
-### Section 1 Lesson 3
+### Section 1 Lecture 3
 - Directives: `v-on`
 ```html
 <div id="app">
@@ -89,4 +90,104 @@ new Vue({
 ```
 ## SECTION 2
 
-### Section 2 Lesson 3
+### Section 2 Lecture 10
+- Using a `method` to render text
+```html
+<div id="app">
+    <p>{{ sayHello() }}</p>
+</div>
+```
+
+```javascript
+new Vue({
+    el: '#app',
+    data: {},
+    methods: {
+        sayHello() {
+            return 'Hello There!';
+        }
+    }
+});
+```
+
+### Section 2 Lecture 11
+- Using a `method` to return `data` properties
+```html
+<div id="app">
+    <p>{{ sayHello() }}</p>
+</div>
+```
+
+```javascript
+new Vue({
+    el: '#app',
+    data: {
+        title: 'Hello World',
+    },
+    methods: {
+        sayHello() {
+            return this.title;
+        }
+    }
+});
+```
+
+### Section 2 Lecture 12
+- Directive: `v-bind`
+```html
+<div id="app">
+    <a v-bind:href="link">Google</a>
+</div>
+```
+
+```javascript
+new Vue({
+    el: '#app',
+    data: {
+        link: 'https://google.com',
+    },
+    methods: {}
+});
+```
+
+### Section 2 Lecture 14
+- Directive: `v-once`
+```html
+<div id="app">
+    <p v-once>{{ title }}</p>
+    <p>{{ sayHello() }}</p>
+</div>
+```
+
+```javascript
+new Vue({
+    el: '#app',
+    data: {
+        title: 'Hello World',
+    },
+    methods: {
+        sayHello() {
+            this.title= 'Hello!';
+            return this.title;
+        }
+    }
+});
+```
+
+### Section 2 Lecture 15
+- Directive: `v-html` Outputting raw HTML
+```html
+<div id="app">
+    <p v-html='finshedLink'></p>
+</div>
+```
+
+```javascript
+new Vue({
+    el: '#app',
+    data: {
+        finshedLink: "<a href='https://google.com'>Google</a>"
+    },
+    methods: {}
+});
+```
