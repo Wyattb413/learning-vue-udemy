@@ -17,7 +17,7 @@ Binding to Attributes | [Lecture 12](#section-2-lecture-12)
 Disable Re-Rendering with v-once | [Lecture 14](#section-2-lecture-14)
 How to Output Raw HTML | [Lecture 15](#section-2-lecture-15)
 **ASSIGNMENTS** | 
- | [Assignment 1](https://github.com/Wyattb413/learning-vue-udemy/blob/master/assignments/1.html)
+Topics Covered from Section 1-2 | [Assignment 1](https://github.com/Wyattb413/learning-vue-udemy/blob/master/assignments/1.html)
 
 ## SECTION 1
 
