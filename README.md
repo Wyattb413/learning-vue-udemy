@@ -1,6 +1,7 @@
 # Vue.js Notes
 
 S# = Section Number
+
 L# = Lesson Number
 
 ## Table of Contents
