@@ -2,7 +2,7 @@
 
 [**Udemy Course Link**](https://www.udemy.com/vuejs-2-the-complete-guide/learn/v4/overview)
 
-[**Vue CDN Link**](https://unpkg.com/vue/dist/vue.js)
+[**Vue CDN Link**](https://unpkg.com/vue/dist/vue.js) - https://unpkg.com/vue/dist/vue.js
 
 ## Table of Contents
 Lesson Topic | Link
