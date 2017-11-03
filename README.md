@@ -2,21 +2,17 @@
 
 [**Udemy Course Link**](https://www.udemy.com/vuejs-2-the-complete-guide/learn/v4/overview)
 
-**S#** = Section Number
-
-**L#** = Lesson Number
-
 ## Table of Contents
 Lesson Topic | Link
 --- | ---
 **SECTION 1** | [Section 1](#section-1)
-Let's Create our First Vuejs Application | [S1 L2](#s1-l2)
-Extending the Vuejs Application | [S1 L3](#s1-l3)
-**SECTION 2** | [Section 2](#section-2)
+Let's Create our First Vuejs Application | [Lesson 2](#section-1-lesson-2)
+Extending the Vuejs Application | [Lesson 3](#section-1-lesson-3)
+**SECTION 2** | [Section 2](#section-2-lesson-1)
 
 ## SECTION 1
 
-### S1 L2
+### Section 1 Lesson 2
 - [Vue CDN Link](https://unpkg.com/vue/dist/vue.js)
 
 - Create Vue instance
@@ -52,7 +48,7 @@ new Vue({
 });
 ```
 
-### S1 L3
+### Section 1 Lesson 3
 - Directives: `v-on`
 ```html
 <div id="app">
@@ -93,4 +89,4 @@ new Vue({
 ```
 ## SECTION 2
 
-### S2 L1
+### Section 2 Lesson 3
