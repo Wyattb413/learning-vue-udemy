@@ -55,7 +55,7 @@ new Vue({
 ```
 
 ### Section 1 Lecture 3
-- Directives: `v-on` doing something on a browser event
+- Directives: `v-on` Doing something on a browser event
 ```html
 <div id="app">
     <input type="text" v-on:input="changeTitle">
@@ -138,7 +138,7 @@ new Vue({
 ```
 
 ### Section 2 Lecture 12
-- Directive: `v-bind` binding to a `data` attribute
+- Directive: `v-bind` Binding to a `data` attribute
 ```html
 <div id="app">
     <a v-bind:href="link">Google</a>
