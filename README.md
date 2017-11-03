@@ -1,8 +1,8 @@
 # Vue.js Notes
 
-*S#* = Section Number
+**S#** = Section Number
 
-*L#* = Lesson Number
+**L#** = Lesson Number
 
 ## Table of Contents
 Lesson Topic | Link
