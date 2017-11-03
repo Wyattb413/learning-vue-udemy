@@ -55,7 +55,7 @@ new Vue({
 ```
 
 ### Section 1 Lecture 3
-- Directives: `v-on`
+- Directives: `v-on` doing something on a browser event
 ```html
 <div id="app">
     <input type="text" v-on:input="changeTitle">
@@ -138,7 +138,7 @@ new Vue({
 ```
 
 ### Section 2 Lecture 12
-- Directive: `v-bind`
+- Directive: `v-bind` binding to a `data` attribute
 ```html
 <div id="app">
     <a v-bind:href="link">Google</a>
@@ -156,7 +156,7 @@ new Vue({
 ```
 
 ### Section 2 Lecture 14
-- Directive: `v-once`
+- Directive: `v-once` Rendering the template once
 ```html
 <div id="app">
     <p v-once>{{ title }}</p>
