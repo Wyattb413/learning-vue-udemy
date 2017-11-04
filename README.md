@@ -5,6 +5,7 @@
 [**Vue CDN Link**](https://unpkg.com/vue/dist/vue.js) - https://unpkg.com/vue/dist/vue.js
 
 ## Table of Contents
+
 Lecture Topic | Link
 --- | ---
 **SECTION 1** | [**Section 1**](#section-1)
@@ -19,15 +20,23 @@ How to Output Raw HTML | [Lecture 15](#section-2-lecture-15)
 **ASSIGNMENTS** | 
 Topics Covered from Section 1-2.15 | [Assignment 1](https://github.com/Wyattb413/learning-vue-udemy/blob/master/assignments/1.html)
 
+<!-- ################################################################################################################ -->
+<!--                                                     SECTION 1                                                    -->
+<!-- ################################################################################################################ -->
+
 ## SECTION 1
 
 ### Section 1 Lecture 2
+
 - Create Vue instance
+
 ```javascript
+
 new Vue({});
 ```
 
 - Bind Vue instace to HTML element with `el`
+
 ```html
 <div id="app">
 </div>
@@ -40,6 +49,7 @@ new Vue({
 ```
 
 - Vue instance: `data`
+
 ```html
 <div id="app">
     <p>{{ title }}</p>
@@ -56,7 +66,9 @@ new Vue({
 ```
 
 ### Section 1 Lecture 3
-- Directives: `v-on` Doing something on a browser event
+
+- *Directive*: `v-on` Doing something on a browser event
+
 ```html
 <div id="app">
     <input type="text" v-on:input="changeTitle">
@@ -74,6 +86,7 @@ new Vue({
 ```
 
 - Vue instance: `methods`
+
 ```html
 <div id="app">
     <input type="text" v-on:input="changeTitle">
@@ -94,10 +107,17 @@ new Vue({
     }
 });
 ```
+
+<!-- ################################################################################################################ -->
+<!--                                                     SECTION 2                                                    -->
+<!-- ################################################################################################################ -->
+
 ## SECTION 2
 
 ### Section 2 Lecture 10
+
 - Using a `method` to render text
+
 ```html
 <div id="app">
     <p>{{ sayHello() }}</p>
@@ -117,7 +137,9 @@ new Vue({
 ```
 
 ### Section 2 Lecture 11
+
 - Using a `method` to return `data` properties
+
 ```html
 <div id="app">
     <p>{{ sayHello() }}</p>
@@ -139,7 +161,9 @@ new Vue({
 ```
 
 ### Section 2 Lecture 12
-- Directive: `v-bind` Binding to a `data` attribute
+
+- *Directive*: `v-bind` Binding to a `data` attribute
+
 ```html
 <div id="app">
     <a v-bind:href="link">Google</a>
@@ -157,7 +181,9 @@ new Vue({
 ```
 
 ### Section 2 Lecture 14
-- Directive: `v-once` Rendering the template once
+
+- *Directive*: `v-once` Rendering the template once
+
 ```html
 <div id="app">
     <p v-once>{{ title }}</p>
@@ -181,7 +207,9 @@ new Vue({
 ```
 
 ### Section 2 Lecture 15
-- Directive: `v-html` Outputting raw HTML
+
+- *Directive*: `v-html` Outputting raw HTML
+
 ```html
 <div id="app">
     <p v-html='finshedLink'></p>
@@ -197,3 +225,56 @@ new Vue({
     methods: {}
 });
 ```
+### Section 2 Lecture 16
+
+- *Directive*: `v-on` Respond to HTML element event
+
+```html
+<div id="app">
+    <button v-on:click='increaseCounter'></button>
+</div>
+```
+
+```javascript
+new Vue({
+    el: '#app',
+    data: {
+        counter: 0,
+    },
+    methods: {
+        increaseCounter() {
+            this.counter++;
+        }
+    }
+});
+```
+
+### Section 2 Lecture 17
+
+- Utilizing HTML event data with `v-on`
+
+```html
+<div id="app">
+    <p v-bind:mouseover='updateCoordinates'>Coordinates: {{ x }} , {{ y }}</p>
+</div>
+```
+
+```javascript
+new Vue({
+    el: '#app',
+    data: {
+        x: 0,
+        y: 0,
+    },
+    methods: {
+        updateCoordinates(event) {
+            this.x = event.clientX;
+            this.y = event.clientY;
+        }
+    }
+});
+```
+
+<!-- ################################################################################################################ -->
+<!--                                                     SECTION 3                                                    -->
+<!-- ################################################################################################################ -->
