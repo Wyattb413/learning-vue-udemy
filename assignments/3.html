@@ -1,0 +1,39 @@
+<script src="https://npmcdn.com/vue/dist/vue.js"></script>
+
+<div id="exercise">
+    <!-- 1) Show a "result" of 'not there yet' as long as "value" is not equal to 37 - you can change "value" with the buttons. Print 'done' once you did it -->
+    <div>
+        <p>Current Value: {{ count }}</p>
+        <button @click="count += 5">Add 5</button>
+        <button @click="count += 1">Add 1</button>
+        <p>{{ result }}</p>
+    </div>
+    <!-- 2) Watch for changes in the "result" and reset the "value" after 5 seconds (hint: setTimeout(..., 5000) -->
+    <div>
+        <input v-model='textValue' type="text">
+        <p>{{ textValue }}</p>
+    </div>
+</div>
+
+<script>
+    new Vue({
+        el: '#exercise',
+        data: {
+            count: 0,
+            textValue: 'Default',
+        },
+        computed: {
+            result() {
+                return this.count === 37 ? 'YAY! 37!!!' : 'Not there yet...keep going!';
+            },
+        },
+        watch: {
+            textValue(value) {
+                var vm = this;
+                setTimeout(function() {
+                    vm.textValue = 'Default';
+                }, 5000)
+            }
+        },
+    })
+</script>

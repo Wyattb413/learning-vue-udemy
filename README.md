@@ -25,9 +25,12 @@ Listening to Keyboard Events | [Lecture 20](#section-2-lecture-20)
 Writing Javascript Code in the Templates | [Lecture 21](#section-2-lecture-21)
 Using Two-Way-Binding | [Lecture 22](#section-2-lecture-22)
 Reacting to Changes with Computed Properties | [Lecture 23](#section-2-lecture-23)
+An Alternative to Computed properties: Watching for Changes | [Lecture 24](#section-2-lecture-24)
+Saving Time with Shorthands | [Lecture 25](#section-2-lecture-25)
 **ASSIGNMENTS** | 
-Topics Covered from Section 1-2.15 | [Assignment 1](https://github.com/Wyattb413/learning-vue-udemy/blob/master/assignments/1.html)
-Topics Covered from Section 2.16-2.20 | [Assignment 2](https://github.com/Wyattb413/learning-vue-udemy/blob/master/assignments/2.html)
+Topics Covered from Section 1 - Section 2 Lecture 15 | [Assignment 1](https://github.com/Wyattb413/learning-vue-udemy/blob/master/assignments/1.html)
+Topics Covered from Section 2 Lecture 16 - Section 2 Lecture 20 | [Assignment 2](https://github.com/Wyattb413/learning-vue-udemy/blob/master/assignments/2.html)
+Topics Covered from Section 2 Lecture 21 - Section 2 Lecture 25 | [Assignment 3](https://github.com/Wyattb413/learning-vue-udemy/blob/master/assignments/3.html)
 
 <!-- ################################################################################################################ -->
 <!--                                                     SECTION 1                                                    -->
@@ -425,6 +428,65 @@ new Vue({
             return this.counter > 10 ? 'Counter is greater than 10' : 'Counter is less than 10'
         }
     }
+});
+```
+
+### Section 2 Lecture 24
+
+- Vue instance: `watch` Watching for changes to `data` properties
+
+```html
+<div id="app">
+    <button v-on:click='counter++'></button>
+    {{ counter }} {{ result }}
+</div>
+```
+
+```javascript
+new Vue({
+    el: '#app',
+    data: {
+        counter: 0,
+    },
+    computed: {
+        result() {
+            return this.counter > 10 ? 'is greater than 10' : 'is less than 10'
+        }
+    },
+    watch: {
+        counter(value) {
+            var vm = this;
+            setTimeout(function() {
+                vm.counter = 0;
+            }, 2000);
+        }
+    },
+});
+```
+
+### Section 2 Lecture 25
+
+- Vue shorthand syntax
+
+```html
+<div id="app">
+    <button @click='changeLink'>Click to Change the Link</button>
+
+    <a :href='finsihedLink'>Link</a>
+</div>
+```
+
+```javascript
+new Vue({
+    el: '#app',
+    data: {
+        link: 'https://google.com',
+    },
+    methods: {
+        changeLInk() {
+            this.link = 'https://youtube.com';
+        },
+    },
 });
 ```
 
