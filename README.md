@@ -188,7 +188,6 @@ new Vue({
     data: {
         link: 'https://google.com',
     },
-    methods: {}
 });
 ```
 
@@ -234,7 +233,6 @@ new Vue({
     data: {
         finshedLink: "<a href='https://google.com'>Google</a>"
     },
-    methods: {}
 });
 ```
 
@@ -381,7 +379,6 @@ new Vue({
     data: {
         counter: 0,
     },
-    methods: {}
 });
 ```
 
@@ -402,7 +399,6 @@ new Vue({
     data: {
         name: 'Kylo Ren',
     },
-    methods: {}
 });
 ```
 
@@ -488,6 +484,153 @@ new Vue({
         },
     },
 });
+```
+
+### Section 2 Lecture 26
+
+- Dynamic CSS: `:class`
+
+```html
+<style>
+    .square250 {
+        height: 250px;
+        width: 250px;
+        background-color: seashell;
+        display: inline-block;
+        margin: 10px;
+    }
+
+    .applyDarkRed {
+        background-color: darkred;
+    }
+
+    .applyDarkOliveGreen {
+        background-color: darkolivegreen;
+    }
+
+    .applyTan {
+        background-color: tan;
+    }
+
+    .applyTeal {
+        background-color: teal;
+    }
+</style>
+
+<div id="app">
+    <div 
+        @click='applyDarkRed = !applyDarkRed'
+        class='square250'
+        :class='{ applyDarkRed: applyDarkRed }'>
+    </div>
+
+    <div 
+        @click='applyDarkOliveGreen = !applyDarkOliveGreen'
+        class='square250'
+        :class='{ applyDarkOliveGreen: applyDarkOliveGreen }'>
+    </div>
+
+    <div 
+        @click='applyTan = !applyTan'
+        class='square250'
+        :class='{ applyTan: applyTan }'>
+    </div>
+
+    <div 
+        @click='applyTeal = !applyTeal'
+        class='square250'
+        :class='{ applyTeal: applyTeal }'>
+    </div>
+</div>
+```
+
+```javascript
+new Vue({
+        el: '#app',
+        data: {
+            applyDarkRed: false,
+            applyDarkOliveGreen: false,
+            applyTan: false,
+            applyTeal: false,
+        },
+    });
+```
+
+### Section 2 Lecture 27
+
+- Dynamic CSS using `computed` properties
+
+```html
+<style>
+    .square250 {
+        height: 250px;
+        width: 250px;
+        background-color: seashell;
+        display: inline-block;
+        margin: 10px;
+    }
+
+    .applyDarkRed {
+        background-color: darkred;
+    }
+
+    .applyDarkOliveGreen {
+        background-color: darkolivegreen;
+    }
+
+    .applyTan {
+        background-color: tan;
+    }
+
+    .applyTeal {
+        background-color: teal;
+    }
+</style>
+
+<div id="app">
+    <div 
+        @click='applyDarkRed = !applyDarkRed'
+        class='square250'
+        :class='applyComputedClass'>
+    </div>
+
+    <div 
+        @click='applyDarkOliveGreen = !applyDarkOliveGreen'
+        class='square250'
+        :class='{ applyDarkOliveGreen: applyDarkOliveGreen }'>
+    </div>
+
+    <div 
+        @click='applyTan = !applyTan'
+        class='square250'
+        :class='{ applyTan: applyTan }'>
+    </div>
+
+    <div 
+        @click='applyTeal = !applyTeal'
+        class='square250'
+        :class='{ applyTeal: applyTeal }'>
+    </div>
+</div>
+```
+
+```javascript
+new Vue({
+        el: '#app',
+        data: {
+            applyDarkRed: false,
+            applyDarkOliveGreen: false,
+            applyTan: false,
+            applyTeal: false,
+        },
+        computed: {
+            applyComputedClass() {
+                return {
+                    applyDarkRed: this.applyDarkRed;
+                }
+            }
+        },
+    });
 ```
 
 <!-- ################################################################################################################ -->
