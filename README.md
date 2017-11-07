@@ -717,6 +717,51 @@ new Vue({
     });
 ```
 
+### Section 2 Lecture 29
+
+- Dynamic CSS using `computed` properties and `v-model`
+
+```html
+<style>
+    .square250 {
+        height: 250px;
+        width: 250px;
+        display: inline-block;
+        margin: 10px;
+    }
+</style>
+
+<div id="app">
+    <div 
+        class='square250'
+        :style='computedStyle'>
+    </div>
+
+    <hr>
+
+    <input v-model='color' type='text'/>
+    <input v-model='width' type='text'/>
+</div>
+```
+
+```javascript
+new Vue({
+    el: '#app',
+    data: {
+        width: 250,
+        color: 'darkred',
+    },
+    computed: {
+        computedStyle() {
+            return {
+                backgroundColor: this.color,
+                width: this.width + 'px',
+            }
+        }
+    },
+});
+```
+
 <!-- ################################################################################################################ -->
 <!--                                                     SECTION 3                                                    -->
 <!-- ################################################################################################################ -->
